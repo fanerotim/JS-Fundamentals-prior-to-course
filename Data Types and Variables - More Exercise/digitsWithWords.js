@@ -1,3 +1,10 @@
+// Write a function that receives a digit in the form of a word (as a string) and prints the digit (as a number).
+// Examples
+// Input	Output
+// 'nine'	9
+// 'two'	2
+// 'zero'	0
+
 function digitsWithWords(digit) {
 
     switch(digit) {
