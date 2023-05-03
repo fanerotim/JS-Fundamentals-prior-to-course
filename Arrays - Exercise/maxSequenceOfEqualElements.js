@@ -1,42 +1,56 @@
-function maxSequenceOfEqualElements(arr) {
+function maxSequence(arr) {
 
-    let currentElement = 0;
+    let elementToCompare = arr[0];
+    let result = [arr[0]];
     let counter = 0;
-    let result = '';
+    let leftmost = [];
+    let secondSequence = [];
 
-    let counterBuff = 0;
-    let leftmostBuff = 0;
-    let resultBuff = arr[0] + '';
-    let isDifferent = false;
-
+    let currentElement = '';
     for (let i = 1; i < arr.length; i++) {
-        currentElement = arr[i] + '';
+        currentElement = arr[i];
 
-        if (currentElement === resultBuff[0]) {
-            resultBuff += ` ${currentElement}`;
+        if (currentElement === elementToCompare) {
+            if (result === '') {
+                result.push(currentElement);
+            } else {
+                result.push(currentElement);
+            }
             counter++;
         } else {
-            if (resultBuff.length > 1 && counter >= 1) {
-                if (counterBuff === 0 && isDifferent === true) {
-                    leftmostBuff = resultBuff;
-                }
-                counterBuff = resultBuff;
+            if (result.length > 1 && leftmost.length === 0 && counter >= 1) {
+                leftmost = result;
+            } else if (result.length > 1 && counter >= 1) {
+                secondSequence = result;
             }
-            resultBuff = currentElement.toString();
-            isDifferent = true;
+
+            elementToCompare = currentElement;
+            result = [];
+            result.push(elementToCompare);
         }
     }
+    
+    let leftmostString = '';
+    let resultString = '';
+    let secondSequenceString = '';
 
-    if (counterBuff === 0) {
-        console.log(resultBuff);
-        return;
-    } else {
-        if (counterBuff.length === leftmostBuff.length) {
-            console.log(leftmostBuff);
-            return;
+    if (leftmost.length >= result.length && leftmost.length >= secondSequence.length) {
+        for (let i = 0; i < leftmost.length; i++) {
+            leftmostString += `${leftmost[i]} `
         }
-        console.log(counterBuff);
-    }  
+        console.log(leftmostString);
+    } else if (result.length > secondSequence.length) {
+        for (let j = 0; j < result.length; j++) {
+            resultString += `${result[j]} `
+        }
+        console.log(resultString);
+    } else {
+        for (let k = 0; k < secondSequence.length; k++) {
+            secondSequenceString += `${secondSequence[k]} `
+        }
+        console.log(secondSequenceString);
+    }
 }
 
-maxSequenceOfEqualElements([2, 1, 1, 2, 3, 3, 2, 2, 2, 1]);
+
+maxSequence([2, 2, 2, 1, 1, 1, 1]);
