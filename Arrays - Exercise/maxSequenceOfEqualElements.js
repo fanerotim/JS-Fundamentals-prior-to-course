@@ -53,4 +53,5 @@ function maxSequence(arr) {
 }
 
 
-maxSequence([2, 2, 2, 1, 1, 1, 1]);
+
+// maxSequence([2, 1, 1, 2, 2, 2, 2]);
