@@ -1,7 +1,7 @@
 function loadingBar(number) {
 
-    let result = ['.', '.', '.', '.','.','.','.','.','.','.'];
-    
+    let result = ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.'];
+
     for (let i = 10; i <= number; i += 10) {
         result.unshift('%');
         result.pop();
@@ -10,7 +10,6 @@ function loadingBar(number) {
     result.push(']');
     result.unshift('[')
     result.unshift(`${number}% `)
-    
 
     if (number < 100) {
         console.log(result.join(''));
