@@ -15,8 +15,7 @@ function sort(arr) {
         }
         counter++;   
     }
-    console.log(sortedArray.join(' '));
-    
+    console.log(sortedArray.join(' '));  
 }
 
 sort([1, 21, 3, 52, 69, 63, 31, 2, 18, 94]);
