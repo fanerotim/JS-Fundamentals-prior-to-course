@@ -1,11 +1,11 @@
 function sortArrayByCriteria(arr) {
 
-    arr.sort(function (a, b) {
+    let sortedArray = arr.sort((a, b) => {
         if (a.length < b.length) {
             return -1;
         } else if (a.length > b.length) {
             return 1;
-        } else if (a.length === b.length) {
+        } else if (a.length === a.length) {
             return a.localeCompare(b);
         }
     })
