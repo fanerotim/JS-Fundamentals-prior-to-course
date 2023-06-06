@@ -50,7 +50,6 @@ function airPolution(pollutionMap, commands) {
                 } else {
                     result += `, [${row}-${col}]`
                 }
-                
             }
         }
     }
