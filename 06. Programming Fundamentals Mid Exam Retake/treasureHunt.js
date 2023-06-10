@@ -49,10 +49,8 @@ function treasureHunt(arr) {
             stolenItems = treasureChest.splice(0);
         }
 
-        if (stolenItems.length !== 0) {
-            console.log(stolenItems.join(", "));
-            stolenItems = [];
-        }
+        console.log(stolenItems.join(", "));
+        stolenItems = [];
     }
 
     let sum = 0;
