@@ -14,11 +14,10 @@ function rosettaStone(arr) {
     }
 
     let rowCounter = 0;
-    let colCounter = -1;
+    let colCounter = 0;
 
     for (let row = 0; row < stone.length; row++) {
         for (let col = 0; col < stone[0].length; col++) {
-            colCounter++;
 
             if (colCounter === decodingMatrix[0].length) {
                 colCounter = 0;
@@ -29,11 +28,11 @@ function rosettaStone(arr) {
             }
 
             stone[row][col] = Number(stone[row][col]) + Number(decodingMatrix[rowCounter][colCounter]);
-
+            colCounter++;
 
             if (col === stone[row].length - 1) {
                 rowCounter++;
-                colCounter = -1;
+                colCounter = 0;
             }
         }
     }
