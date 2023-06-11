@@ -5,7 +5,6 @@ function blackFlag(arr) {
     let goalPlunder = Number(arr.shift());
     let totalPlunder = 0;
 
-
     for (let i = 1; i <= plunderDays; i++) {
         totalPlunder += dailyPlunder;
 
