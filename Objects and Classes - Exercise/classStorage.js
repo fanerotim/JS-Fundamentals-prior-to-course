@@ -5,7 +5,14 @@ class Storage {
     }
 
     get totalCost() {        
-        return this.storage.reduce((acc, el) => {return acc + el.price * el.quantity}, 0);
+        // return this.storage.reduce((acc, el) => {
+        //     return acc + el.price * el.quantity
+        // }, 0);
+        let total = 0;
+        for (let el of this.storage) {
+            total += el.price * el.quantity;
+        }
+        return total;
     }
 
     addProduct(input) {
