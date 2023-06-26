@@ -22,7 +22,7 @@ function dictionary(arr) {
         }
     })
     result.sort((a, b) => a.term.localeCompare(b.term));
-
+    
     result.forEach(item => {
         console.log(`Term: ${item.term} => Definition: ${item.description}`)
     })
