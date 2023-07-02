@@ -52,7 +52,7 @@ function travelTime(arr) {
         }
         console.log(finalResult);
         finalResult = '';
-    }  
+    }
 }
 
 travelTime([
