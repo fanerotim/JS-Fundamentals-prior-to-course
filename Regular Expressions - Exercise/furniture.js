@@ -3,7 +3,7 @@ function furniture(arr) {
     let index = 0;
     let command = arr[index];
 
-    let pattern = />>[A-Z][A-Za-z]+<<\d+[.]?\d*!{1}\d+/g;
+    let pattern = />>[A-Z][A-Za-z]+<<\d+[\.]?\d*!\d+/g;
 
     console.log('Bought furniture:')
     let finalCost = 0;
